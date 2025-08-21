@@ -7,8 +7,10 @@ from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 import seaborn as sns
 import pickle
+from pathlib import Path
 
-df = pd.read_csv('D:/forPython/PythonProject1/helpFiles/data.csv')
+parent_dir = Path(__file__).parent.parent
+df = pd.read_csv(parent_dir / 'helpFiles/data.csv')
 # print(df.keys())
 
 df = df.drop(columns=['Unnamed: 32', 'id'], axis=1)
