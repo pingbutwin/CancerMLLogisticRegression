@@ -53,5 +53,5 @@ plt.figure(figsize=(14, 8))
 sns.heatmap(conf_matr, annot=True, fmt='d', cmap='Greens')
 plt.show()
 
-with open('D:/forPython/PythonProject1/helpFiles/logRegBreastCan', 'wb') as f:
+with open(parent_dir / 'helpFiles/logRegBreastCan', 'wb') as f:
     pickle.dump(logReg, f)
